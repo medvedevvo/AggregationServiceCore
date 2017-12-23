@@ -46,6 +46,60 @@ namespace AggregationService.Controllers
             return Ok(driver);
         }
 
+        [HttpGet("users/{userid}/cars")]
+        public async Task<IActionResult> GetUserCars([FromRoute] int userid)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            List<Car> cars = new List<Car>();
+
+            await _context.Drivers.ForEachAsync(d => 
+            {
+                if (d.IdUser == userid)
+                {
+                    foreach (Car c in _context.Cars)
+                        if (d.IdCar == c.Id) cars.Add(c);
+                }
+            });
+
+            if (cars == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(cars);
+        }
+
+        [HttpGet("cars/{carid}/users")]
+        public async Task<IActionResult> GetCarUsers([FromRoute] int carid)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            List<User> users = new List<User>();
+
+            await _context.Drivers.ForEachAsync(d =>
+            {
+                if (d.IdCar == carid)
+                {
+                    foreach (User u in _context.Users)
+                        if (d.IdUser == u.Id) users.Add(u);
+                }
+            });
+
+            if (users == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(users);
+        }
+
         // PUT: api/Drivers/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDriver([FromRoute] int id, [FromBody] Driver driver)

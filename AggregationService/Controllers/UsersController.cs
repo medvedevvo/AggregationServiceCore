@@ -124,6 +124,13 @@ namespace AggregationService.Controllers
                 return NotFound();
             }
 
+            await _context.Drivers.ForEachAsync(d =>
+            {
+                if (d.IdUser == id)
+                {
+                    _context.Drivers.Remove(d);
+                }
+            });
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
