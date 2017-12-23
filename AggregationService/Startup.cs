@@ -27,7 +27,7 @@ namespace AggregationService
         {
             services.AddMvc();
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=Drivers.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=tcp:medvedev.database.windows.net,1433;Initial Catalog=CarMonitoring;Persist Security Info=False;User ID=medvedev_vo;Password=028545vm!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";//@"Server=(localdb)\mssqllocaldb;Database=Drivers.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
 
             services.AddDbContext<DriversDbContext>(options => options.UseSqlServer(connection));// Configuration.GetConnectionString("DriversConnection")));
 

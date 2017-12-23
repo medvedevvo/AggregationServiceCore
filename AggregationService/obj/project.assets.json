@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "EntityFramework.Toolkit.Core/1.0.5": {
-        "type": "package",
-        "compile": {
-          "lib/net45/EntityFramework.Toolkit.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.Toolkit.Core.dll": {}
-        }
-      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -5041,24 +5032,6 @@
     }
   },
   "libraries": {
-    "EntityFramework.Toolkit.Core/1.0.5": {
-      "sha512": "QIs1EBri/n1Oee5/1i6MmfBSxvmFDdz3oO2j9mRLtIE8hfcd9d/Dtq0aKylJ0EgNHLwcSaZN+aTaQKNLO3/cUw==",
-      "type": "package",
-      "path": "entityframework.toolkit.core/1.0.5",
-      "files": [
-        "entityframework.toolkit.core.1.0.5.nupkg.sha512",
-        "entityframework.toolkit.core.nuspec",
-        "lib/net40/EntityFramework.Toolkit.Core.dll",
-        "lib/net40/EntityFramework.Toolkit.Core.pdb",
-        "lib/net40/EntityFramework.Toolkit.Core.xml",
-        "lib/net45/EntityFramework.Toolkit.Core.dll",
-        "lib/net45/EntityFramework.Toolkit.Core.pdb",
-        "lib/net45/EntityFramework.Toolkit.Core.xml",
-        "tools/init.ps1",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -13143,7 +13116,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "EntityFramework.Toolkit.Core >= 1.0.5",
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.1",
@@ -13195,10 +13167,6 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "EntityFramework.Toolkit.Core": {
-            "target": "Package",
-            "version": "[1.0.5, )"
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.3, )"
@@ -13228,17 +13196,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"EntityFramework.Toolkit.Core 1.0.5\" был восстановлен с помощью \".NETFramework,Version=v4.6.1\", а не целевой платформы проекта \".NETCoreApp,Version=v2.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "EntityFramework.Toolkit.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

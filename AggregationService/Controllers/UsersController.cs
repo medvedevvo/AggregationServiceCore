@@ -18,7 +18,7 @@ namespace AggregationService.Controllers
         public UsersController(DriversDbContext context)
         {
             _context = context;
-            init();
+            //init();
         }
 
         private void init()

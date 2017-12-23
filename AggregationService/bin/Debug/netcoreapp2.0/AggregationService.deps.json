@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "4dc4bebe150709bf9653ff0b72cefa124666f311"
+    "signature": "bf2fa39bd487900a883ba09fb48ad66acaf40d8e"
   },
   "compilationOptions": {
     "defines": [
@@ -23,7 +23,6 @@
     ".NETCoreApp,Version=v2.0": {
       "AggregationService/1.0.0": {
         "dependencies": {
-          "EntityFramework.Toolkit.Core": "1.0.5",
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
@@ -35,14 +34,6 @@
         },
         "compile": {
           "AggregationService.dll": {}
-        }
-      },
-      "EntityFramework.Toolkit.Core/1.0.5": {
-        "runtime": {
-          "lib/net45/EntityFramework.Toolkit.Core.dll": {}
-        },
-        "compile": {
-          "lib/net45/EntityFramework.Toolkit.Core.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -4247,13 +4238,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "EntityFramework.Toolkit.Core/1.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QIs1EBri/n1Oee5/1i6MmfBSxvmFDdz3oO2j9mRLtIE8hfcd9d/Dtq0aKylJ0EgNHLwcSaZN+aTaQKNLO3/cUw==",
-      "path": "entityframework.toolkit.core/1.0.5",
-      "hashPath": "entityframework.toolkit.core.1.0.5.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",

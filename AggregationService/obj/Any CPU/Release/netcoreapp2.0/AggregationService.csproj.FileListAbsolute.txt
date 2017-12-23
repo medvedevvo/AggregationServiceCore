@@ -1,0 +1,11 @@
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\bin\Any CPU\Release\netcoreapp2.0\AggregationService.deps.json
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\bin\Any CPU\Release\netcoreapp2.0\AggregationService.runtimeconfig.json
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\bin\Any CPU\Release\netcoreapp2.0\AggregationService.runtimeconfig.dev.json
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\bin\Any CPU\Release\netcoreapp2.0\AggregationService.dll
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\bin\Any CPU\Release\netcoreapp2.0\AggregationService.pdb
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\obj\Any CPU\Release\netcoreapp2.0\AggregationService.csprojResolveAssemblyReference.cache
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\obj\Any CPU\Release\netcoreapp2.0\AggregationService.csproj.CoreCompileInputs.cache
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\obj\Any CPU\Release\netcoreapp2.0\AggregationService.AssemblyInfoInputs.cache
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\obj\Any CPU\Release\netcoreapp2.0\AggregationService.AssemblyInfo.cs
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\obj\Any CPU\Release\netcoreapp2.0\AggregationService.dll
+C:\IU7\RSOI\CarCheckSystem\2\AggregationService\AggregationService\obj\Any CPU\Release\netcoreapp2.0\AggregationService.pdb

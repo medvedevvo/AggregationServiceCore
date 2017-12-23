@@ -5,10 +5,14 @@ using System.Collections.Generic;
 
 namespace AggregationService.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable("Drivers");
+            migrationBuilder.DropTable("Cars");
+            migrationBuilder.DropTable("Users");
+
             migrationBuilder.CreateTable(
                 name: "Cars",
                 columns: table => new

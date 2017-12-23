@@ -11,8 +11,8 @@ using System;
 namespace AggregationService.Migrations
 {
     [DbContext(typeof(DriversDbContext))]
-    [Migration("20171223121722_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20171223135031_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
