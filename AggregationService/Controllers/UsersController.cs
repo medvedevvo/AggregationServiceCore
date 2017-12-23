@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AggregationService.Models;
+using System.Data.SqlClient;
 
 namespace AggregationService.Controllers
 {
@@ -13,6 +14,7 @@ namespace AggregationService.Controllers
     [Route("api/Users")]
     public class UsersController : Controller
     {
+        private ConnectionSettings connectionSettings = ConnectionSettings.getInstance();
         private readonly DriversDbContext _context;
 
         public UsersController(DriversDbContext context)
@@ -21,16 +23,17 @@ namespace AggregationService.Controllers
             //init();
         }
 
-        private void init()
-        {
-            _context.Users.Add(new User { Surname = "Иванов", Name = "Иван", Patronymic = "Иванович"});
-            _context.Users.Add(new User { Surname = "Петров", Name = "Петр", Patronymic = "Петрович"});
+        //private void init()
+        //{
+        //    _context.Users.Add(new User { Surname = "Иванов", Name = "Иван", Patronymic = "Иванович"});
+        //    _context.Users.Add(new User { Surname = "Петров", Name = "Петр", Patronymic = "Петрович"});
 
-            _context.SaveChanges();
-        }
+        //    _context.SaveChanges();
+        //}
 
 
         // GET: api/Users
+
         [HttpGet]
         public IEnumerable<User> GetUsers()
         {
@@ -38,7 +41,7 @@ namespace AggregationService.Controllers
         }
 
         // GET: api/Users/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetUser")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -99,7 +102,7 @@ namespace AggregationService.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
